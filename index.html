@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <!---fontawsome cdn-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <title>Rupesh's Portfolio</title>
+    </head>
+    <body>
+        <!-----HEADER DESIGN--------->
+        <header class="header">
+            <a href="#" class="logo">Portfolio.</a>
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a> 
+                <a href="#about">About</a>
+                <a href="#services">Skills & Edu.</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+        <!---home section design-->
+        <section class="home" id="home">
+            <div class="home-content">
+                <h3>Hi, Myself</h3>
+                <h1>Rupesh Kamisetti</h1>
+                <h3>I'm a <span class="multiple-text"></span></h3>
+                <p>I am a dedicated student and portrait artist,showcasing and define my Skills, Experience and Education through this portfolio.</p>
+                <p>+91 9640485050 | Andhra Pradesh | rupeshkamisetti@gamil.com</p>
+                <div class="social-media">
+                 <a href="https://www.instagram.com/artistic_sketchingz?igsh=MTc1cHp5bG9lZWRqNQ=="><i class="fa-brands fa-instagram"></i></a>
+                 <a href="https://x.com/RupeshArtz?t=soXBoeTZh5uA09QI7ps2zw&s=09"><i class="fa-brands fa-twitter"></i></a>
+                 <a href="https://www.linkedin.com/in/rupesh-durga-subrahmanyam-kamisetti-b3a037283?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin-in"></i></a>
+                 <a href="https://github.com/RupeshKamisetti"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="down.html" class="btn">Download Resume</a>
+            </div>
+
+
+            <div class="home-img">
+                <img src="cropped_image.png" alt="">
+            </div>
+        </section>
+
+        <!-----about section design-->
+        <section class="about" id="about">
+            <div class="about-img">
+                <img src="picture.jpg" alt="">
+            </div>
+
+
+            <div class="about-content">
+                <h2 class="heading">About <span>Me</span></h2>
+                <h3>Student / portrait Artist</h3>
+                <p>I am a dedicated student and a passionate portrait artist currently pursuing a degree in Electronics and Communication Engineering. With a keen interest in the software field, I am eager to explore and seize the best career opportunities to apply my skills and knowledge.</p>
+                <a href="ab.html" class="btn">Read more</a>
+            </div>
+        </section>
+
+         <!----services section design----->
+        <section class="services" id="services">
+            <h2 class="headinng">My <span>Skills & Edu.</span></h2>
+
+            <div class="services-container">
+                <div class="services-box">
+                    <i class="fa-solid fa-face-smile"></i>
+                    <h3>Skills</h3>
+                    <p>From below ypu can see My Soft skills and other Technical Skills</p>
+                    <a href="skills.jpg" class="btn">Read More</a>
+                </div>
+                <div class="services-box">
+                    <i class="fa-solid fa-school"></i>
+                    <h3>Education</h3>
+                    <p>From Below you can see My collage's and My Grades</p>
+                    <a href="edu.jpg" class="btn">Read More</a>
+                </div>
+                <div class="services-box">
+                    <i class="fa-solid fa-house-laptop"></i>
+                    <h3>Internships</h3>
+                    <p>From here you can see where i did My Internships</p>
+                    <a href="intern.jpg" class="btn">Read More</a>
+                </div>
+            </div>
+        </section>
+        <!-----portfolio section---->
+        <section class="portfolio" id="portfolio">
+            <h2 class="heading">Latest <span>Projects</span></h2>
+
+            <div class="portfolio-container">
+                <div class="portfolio-box">
+                    <img src="1.jpg" alt="img">
+                    <div class="portfolio-layer">
+                        <h4>ML Model</h4>
+                        <p>Machine Learning model of Hand Gestures</p>
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="2.jpg" alt="img">
+                    <div class="portfolio-layer">
+                        <h4>ML Analysis</h4>
+                        <p>Sentimennt Analysis on Movie Theatres Reviews</p>
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </div>
+                </div>
+
+                <div class="portfolio-box">
+                    <img src="3.jpg" alt="img">
+                    <div class="portfolio-layer">
+                        <h4>Frontend Website</h4>
+                        <p>Frontend website Design to a portrait Artist</p>
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-----contact section design--------->
+        <section class="contact" id="contact">
+            <h2 class="heading">Contact <span>Me</span></h2>
+
+            <form method="POST" action="{% url 'contact' %}">
+                {% csrf_token %}
+                <div class="input-box">
+                    <input type="text" placeholder="Full Name">
+                    <input type="email" placeholder="Email Address">
+
+                </div>
+
+                <div class="input-box">
+                    <input type="number" placeholder="Mobile Number">
+                    <input type="text" placeholder="Email Subject">
+
+                </div>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+                <input type="submit" value="Send Message" class="btn">
+
+            </form>
+        </section>
+        <!----footer design---->
+        <footer class="footer">
+            <div class="footer-text">
+                <p>Copyright &copy; 2024 by Rupesh | All Rights Reserved.</p>
+            </div>
+
+            <div class="footer-iconTop">
+                <a href="#home"><i class="fa-solid fa-angle-up"></i></a>
+            </div>
+        </footer>
+
+        <!-----scroll reavel js--------->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <!-----typed js--------->
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script src="script.js"></script>
+    </body>
+
+</html>
